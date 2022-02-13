@@ -1,0 +1,137 @@
+* {
+  margin: 0px;
+  padding: 0;
+  font-family: Verdana, Geneva, Tahoma, sans-serif;
+}
+
+#titleBox {
+  color: rgb(78, 78, 78);
+  width: 600px;
+  margin: 60px auto 0 auto ;
+  text-align: center;
+}
+#container {
+  display: flex;
+  flex-wrap: wrap;
+  background-color: #059dc0;
+  border: 4px solid #04d4f0;
+  width: 600px;
+  height: 600px;
+  padding: 10px;
+  margin: 40px auto;
+  border-radius: 18px;
+}
+.matched {
+  border: solid 1px #fff;
+  width: 78px;
+  height: 78px;
+  margin: 10px;
+  border-radius: 8px;
+  background-color: green;
+}
+.reveal {
+  border: solid 1px #fff;
+  width: 78px;
+  height: 78px;
+  margin: 10px;
+  border-radius: 8px;
+  background-color: rgb(244, 242, 242, 0.5);
+}
+.reveal > p {
+  margin-top: 1.4rem;
+  color: #d6d8d8;
+  font-size: 2rem;
+  text-align: center;
+}
+.matched > p {
+  margin-top: 1.4rem;
+  color: #d6d8d8;
+  font-size: 2rem;
+  text-align: center;
+}
+.card {
+  border: solid 1px #fff;
+  width: 78px;
+  height: 78px;
+  margin: 10px;
+  border-radius: 8px;
+  background-color: #04d4f0;
+  cursor:pointer;
+}
+.card > p {
+  margin-top: 1.4rem;
+  color: #04d4f0;
+  font-size: 2rem;
+  text-align: center;
+}
+
+#container .card.open {
+  transform: rotateY(0);
+  background: #02b3e4;
+  cursor: default;
+  animation-name: flipInY;
+  -webkit-backface-visibility: visible !important;
+  backface-visibility: visible !important;
+  animation-duration: 0.75s;
+}
+
+#container .card.show {
+  font-size: 33px;
+}
+
+#container .card.match {
+  cursor: default;
+  background: #e5f720;
+  font-size: 33px;
+  animation-name: rubberBand;
+  -webkit-backface-visibility: visible !important;
+  backface-visibility: visible !important;
+  animation-duration: 0.75s;
+}
+
+#container .card.unmatched {
+  animation-name: pulse;
+  -webkit-backface-visibility: visible !important;
+  backface-visibility: visible !important;
+  animation-duration: 0.75s;
+  background: #e2043b;
+}
+
+#container .card.disabled {
+  pointer-events: none;
+  opacity: 0.9;
+}
+
+#result {
+  width: 600px;
+  margin: 20px auto;
+  border: 1px solid #ccc;
+  min-height: 20px;
+  border-radius: 6px;
+  padding: 12px;
+  background-color: #059dc0;
+  border: 2px solid #02b3e4;
+}
+#announce {
+  margin: 6px auto;
+  text-align: center;
+  color: white;
+}
+#attempts{
+  margin: 6px auto;
+  text-align: center;
+  color: white;
+}
+button {
+  display: block;
+  margin: 16px auto;
+  background-color: white;
+  padding: 8px 18px;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+}
+button:hover {
+  background-color: rgb(218, 236, 249);
+  cursor:pointer;
+}
+
